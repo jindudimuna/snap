@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  height: 10vh;
+  background-color: #F4F4F4;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.navbar-logo{
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-family: 'poppins';
+  padding-left: 2%;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nav-items {
+  width: 65vw;
+  display: flex;
+
+  margin-right: 2rem;
 }
+
+
+.nav-item {
+  list-style: none;
+  margin-left: 2rem;
+
+}
+
+.nav-items a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s all ease-out;
+  font-size: 1.2em;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item a:hover {
+  background-color: #044C6B ;
+}
+.nav-items a:hover{
+color: white;
+
+}
+
+
+.btn {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s all ease-out;
+  font-size: 1.2em;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background: whitesmoke;
+  color: #044C6B;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn span {
+  margin-left: 0.7rem;
+}
+.login-btn{
+  color: black;
+  padding: 6px 46px;
+
+}
+
+
+/* @media screen and (max-width: 900px) {
+  .btn span {
+    display: none;
+  }
+
+  .login-btn{
+ display: none;
+    
+  }
+} */
