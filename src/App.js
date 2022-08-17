@@ -5,7 +5,8 @@ import About from './pages/About';
 import Features from './pages/Features';
 import Company from './pages/Company';
 import Careers from './pages/Careers';
-
+import Hero from './Components/Hero';
+import Footer from './Components/footer';
 function App() {
   return (
     <div>
@@ -20,7 +21,8 @@ function App() {
 
     </Routes>
       </BrowserRouter>
-
+<Hero />
+<Footer />
     </div>
   );
 }

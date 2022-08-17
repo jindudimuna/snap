@@ -10,11 +10,15 @@ function Navbar (){
     const [mobileView, setMobileView] = React.useState(false);
     const [sidebar, setSidebar] = React.useState(false);
 
-    React.useEffect(() => {
-        if(window.innerWidth < 1065){
-            setMobileView(true);
-        }
-    }, [])
+    //a useEffect for when the view is less than 1065
+    // React.useEffect(() => {
+    //     if(window.innerWidth < 1065){
+    //         setMobileView(true);
+    //     }
+    // }, [])
+
+    // use useEffect to determine the behavior of the state when screen size changes.
+    // a tenary operator can also do this but i got a bit confused lol.
     React.useEffect(() => {
         const handleResize = () => {
             if(window.innerWidth < 1065){
@@ -60,8 +64,17 @@ function Navbar (){
 {/* conditonally render the buttons too */}
        {!mobileView && <Buttons />}
 
+{/* conditonally render the div for the Hamburger that shows in mobileview */}
        {mobileView && (
         <div className="toggle-sidebar">
+
+            {/* another conditionall rendering. If the sidebar is true, show the icon for the hambuger else, 
+            
+            show the close button.
+            next, pass the onClick functions so that the sidebar state toggles between true and false
+            */}
+
+
             {sidebar ? <Icons.FaTimes className="hamburger=toggle" onClick={Hamburger} /> : <Icons.FaBars className="hamburger-toggle" onClick={Hamburger} /> }
             
         </div>
@@ -75,17 +88,17 @@ function Navbar (){
 <ul className="side-items">
    {navlinks.map(item => {
        return(
-           <li key={item.id} className={item.sName}>
+           <li key={item.id} className={item.sName} onClick={Hamburger}>
                <Link to={item.path}>{item.Title}</Link>
            </li>
        )
    })}
 
    </ul>
-<Buttons />
+<Buttons Hamburger={Hamburger} />
 </div>
         </>
     )
 }
 
-export default Navbar
+export default Navbar;

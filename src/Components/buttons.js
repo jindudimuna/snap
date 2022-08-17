@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import * as Icons from "react-icons/fa";
 
 
-function Buttons() {
+function Buttons({Hamburger}) {
   return (
     <>
-    <Link to="signup">
+    <Link to="./signin">
         
-          <span className="login-btn">login</span>
+          <span className="login-btn" onClick={Hamburger}>login</span>
  
       </Link>
 
-      <Link to="signup">
-        <button className="btn">
+      <Link to="./signup">
+        <button className="btn" onClick={Hamburger}>
           <Icons.FaUserPlus />
           <span>Register</span>
         </button>

@@ -1,0 +1,13 @@
+.footer-text{
+    color: #0982FF;
+    font-family: 'Silkscreen', 'poppins';
+    font-size: 1em;
+
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #110D05;
+}
