@@ -2,7 +2,7 @@ export const navlinks = [
     {
         id: 1,
         Title: "Features",
-        path: "./features",
+        path: ".pages/Features",
         nName: "nav-item",
         sName: "sidebar-item",
     },
@@ -10,7 +10,7 @@ export const navlinks = [
     {
         id: 2,
         Title: "Company",
-        path: "./company",
+        path: ".pages/Company",
         nName: "nav-item",
         sName: "sidebar-item",
     },
@@ -18,7 +18,7 @@ export const navlinks = [
     {
         id: 3,
         Title: "Careers",
-        path: "./Careers",
+        path: ".pages/Careers",
         nName: "nav-item",
         sName: "sidebar-item",
     },
@@ -26,7 +26,7 @@ export const navlinks = [
     {
         id: 4,
         Title: "About",
-        path: "./about",
+        path: ".pages/About",
         nName: "nav-item",
         sName: "sidebar-item",
     },

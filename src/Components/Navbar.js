@@ -10,7 +10,11 @@ function Navbar (){
     const [mobileView, setMobileView] = React.useState(false);
     const [sidebar, setSidebar] = React.useState(false);
 
-
+    React.useEffect(() => {
+        if(window.innerWidth < 1065){
+            setMobileView(true);
+        }
+    }, [])
     React.useEffect(() => {
         const handleResize = () => {
             if(window.innerWidth < 1065){
@@ -26,6 +30,12 @@ function Navbar (){
           };
     }, [])
       
+// create a switching function for the hamburger menu
+        function Hamburger() {
+            setSidebar( prevSidebar => !prevSidebar)
+        }
+
+
     return(
 
         <>
@@ -52,13 +62,28 @@ function Navbar (){
 
        {mobileView && (
         <div className="toggle-sidebar">
-            {sidebar ? <Icons.FaTimes /> : <Icons.FaBars /> }
+            {sidebar ? <Icons.FaTimes className="hamburger=toggle" onClick={Hamburger} /> : <Icons.FaBars className="hamburger-toggle" onClick={Hamburger} /> }
             
         </div>
 )}
-     
+   
+
            </nav>
 
+           <div className={sidebar ? "sidebar active" : "sidebar"}>
+
+<ul className="side-items">
+   {navlinks.map(item => {
+       return(
+           <li key={item.id} className={item.sName}>
+               <Link to={item.path}>{item.Title}</Link>
+           </li>
+       )
+   })}
+
+   </ul>
+<Buttons />
+</div>
         </>
     )
 }

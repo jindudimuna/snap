@@ -92,3 +92,70 @@ a {
     
   }
 } */
+
+
+.toggle-sidebar{
+
+  width: 70vw;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.hamburger-toggle{
+
+font-size: 1.8em;
+
+}
+
+
+.sidebar{
+  width: 190px;
+  background-color: #F4F4F4;
+  height: 90vh;
+  display:none;
+  position: absolute;
+  top: 10vh;
+  transition: 0.4s all ease-in-out;
+}
+
+ul.side-items{
+  margin-top: 0px;
+  list-style: none;
+  font-size: 1.2em;
+
+
+
+}
+
+.side-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+
+.sidebar-item a{
+  color: #0E0B05;
+  width: 90px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s all ease-out; 
+
+}
+
+.sidebar-item{
+  margin-top: 1.2em;
+
+}
+
+.sidebar .btn {
+  margin-top: 1.4rem;
+  width: 100%;
+}
+
+.sidebar.active{
+  right: 0; 
+  display: block;
+}
