@@ -83,16 +83,7 @@ a {
 }
 
 
-/* @media screen and (max-width: 900px) {
-  .btn span {
-    display: none;
-  }
 
-  .login-btn{
- display: none;
-    
-  }
-} */
 
 
 .toggle-sidebar{
@@ -155,6 +146,7 @@ ul.side-items{
   margin-top: 1.4rem;
   width: 100%;
 }
+
 
 .sidebar.active{
   left: 0; 

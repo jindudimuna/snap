@@ -10,12 +10,12 @@ function Navbar (){
     const [mobileView, setMobileView] = React.useState(false);
     const [sidebar, setSidebar] = React.useState(false);
 
-    //a useEffect for when the view is less than 1065
-    // React.useEffect(() => {
-    //     if(window.innerWidth < 1065){
-    //         setMobileView(true);
-    //     }
-    // }, [])
+    // a useEffect for when the view is less than 1065
+    React.useEffect(() => {
+        if(window.innerWidth < 1065){
+            setMobileView(true);
+        }
+    }, [])
 
     // use useEffect to determine the behavior of the state when screen size changes.
     // a tenary operator can also do this but i got a bit confused lol.
@@ -23,15 +23,22 @@ function Navbar (){
         const handleResize = () => {
             if(window.innerWidth < 1065){
                 setMobileView(true);
-            } else {
+                
+            } 
+      
+            else {
                 setMobileView(false);
+
             }
+
         }
 
         window.addEventListener("resize", handleResize)
         return () => {
             window.removeEventListener("resize", handleResize);
           };
+
+          
     }, [])
       
 // create a switching function for the hamburger menu
@@ -75,7 +82,7 @@ function Navbar (){
             */}
 
 
-            {sidebar ? <Icons.FaTimes className="hamburger=toggle" onClick={Hamburger} /> : <Icons.FaBars className="hamburger-toggle" onClick={Hamburger} /> }
+            {sidebar ? <Icons.FaTimes className="hamburger-toggle" onClick={Hamburger} /> : <Icons.FaBars className="hamburger-toggle" onClick={Hamburger} /> }
             
         </div>
 )}
