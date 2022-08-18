@@ -22,7 +22,7 @@ function Hero(){
 
         <div className="description">
             <h2 className="description-text"> 
-            Get your team in sync no matter your locaation.
+            Get your team in sync no matter your location.
             Streamline processes, create team rituals and watch
             productivity soar.
             </h2>
